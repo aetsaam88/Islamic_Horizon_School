@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Islamic Horizon International School System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          maroon: '#5B0606',
+          maroondeep: '#520000',
+          brightgold: '#FFBD00',
+          gold: '#FFC000',
+          lightgold: '#E5A823',
+          medbrown: '#A66828',
+          darkbrown: '#603813',
+          cream: '#FBF6EC',
+          ink: '#1A2420',
+          inksoft: '#4A5952',
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html{scroll-behavior:smooth;}
+  .star{color:var(--tw-text-opacity,1)}
+  .eyebrow::before{content:"";width:22px;height:2px;background:currentColor;display:inline-block;}
+  .arch{border-radius:50% 50% 8px 8px / 46% 46% 8px 8px;}
+  
+  /* Responsive Adjustments */
+  @media (max-width: 640px) {
+    .hero-text { font-size: 1.875rem; }
+    .section-title { font-size: 1.875rem; }
+  }
+</style>
+</head>
+<body class="bg-cream text-ink font-sans leading-relaxed">
+
+<svg style="position:absolute;width:0;height:0;">
+  <defs>
+    <symbol id="star8" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="1.4">
+        <path d="M50 5 L61 32 L88 26 L68 46 L88 74 L61 68 L50 95 L39 68 L12 74 L32 46 L12 26 L39 32 Z"/>
+        <circle cx="50" cy="50" r="16"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- TOP BAR - Responsive -->
+<div class="bg-maroon text-white/80 text-xs">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7 py-2 flex justify-between items-center flex-wrap gap-2">
+    <div class="flex gap-3 sm:gap-6 flex-wrap text-[10px] sm:text-xs">
+      <span class="flex items-center gap-1">📞 +92 300 1234567</span>
+      <span class="hidden sm:flex items-center gap-1">🕐 Mon – Sat: 8:00 AM – 1:30 PM</span>
+      <span class="flex items-center gap-1">📍 Address: Mohallah Eid Gah Jassian Road, Mirza Attock</span>
+    </div>
+    <div class="flex gap-2 sm:gap-3">
+      <a href="#" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-white/30 flex items-center justify-center text-[8px] sm:text-[10px]">f</a>
+      <a href="#" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-white/30 flex items-center justify-center text-[8px] sm:text-[10px]">in</a>
+      <a href="#" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-white/30 flex items-center justify-center text-[8px] sm:text-[10px]">ig</a>
+    </div>
+  </div>
+</div>
+<!-- HEADER - Responsive -->
+<header class="sticky top-0 z-50 bg-cream border-b border-maroon/10">
+  <!-- Padding py-1 sm:py-4 ko kam karke py-1 sm:py-1.5 kar diya hai -->
+  <div class="max-w-6xl mx-auto px-2 sm:px-6 lg:px-7 py-1 sm:py-1.5 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 sm:gap-3">
+      <!-- Mobile: 56px (w-14 h-14) | Desktop: 64px (sm:w-16 sm:h-16) -->
+      <img src="islamic_horizon_logo.png" alt="Islamic Horizon Logo" class="w-14 sm:w-16 h-14 sm:h-16 object-contain shrink-0" />
+      <div class="font-serif leading-tight">
+        <div class="text-xs sm:text-sm font-bold text-maroon">Islamic Horizon</div>
+        <div class="text-[7px] sm:text-[10px] text-lightgold tracking-widest uppercase font-semibold">School System</div>
+      </div>
+    </a>
+    
+    <nav class="hidden md:block">
+      <ul class="flex gap-4 lg:gap-8 text-xs sm:text-sm font-semibold text-inksoft">
+        <li><a href="#about" class="hover:text-maroon transition">About</a></li>
+        <li><a href="#gallery" class="hover:text-maroon transition">Gallery</a></li>
+        <li><a href="#programs" class="hover:text-maroon transition">Academics</a></li>
+        <li><a href="#admissions" class="hover:text-maroon transition">Admissions</a></li>
+        <li><a href="#why" class="hover:text-maroon transition">Why Us</a></li>
+        <li><a href="#team" class="hover:text-maroon transition">Faculty</a></li>
+        <li><a href="#contact" class="hover:text-maroon transition">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Button ki vertical padding py-2 lg:py-3 ko reduce karke py-1.5 lg:py-2 kar diya hai -->
+    <a href="#contact" class="hidden md:inline-flex items-center gap-2 bg-brightgold text-maroon font-semibold text-xs lg:text-sm px-4 lg:px-6 py-1.5 lg:py-2 rounded hover:bg-gold hover:-translate-y-0.5 transition">Apply Now</a>
+    
+    <button class="md:hidden flex flex-col gap-1.5" id="menuBtn" aria-label="menu">
+      <span class="w-5 h-0.5 bg-maroon"></span>
+      <span class="w-5 h-0.5 bg-maroon"></span>
+      <span class="w-5 h-0.5 bg-maroon"></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <ul id="mobileNav" class="hidden md:hidden flex-col gap-3 bg-cream px-4 pb-4 text-xs font-semibold text-inksoft">
+    <li><a href="#about" class="block py-2">About</a></li>
+    <li><a href="#gallery" class="block py-2">Gallery</a></li>
+    <li><a href="#programs" class="block py-2">Academics</a></li>
+    <li><a href="#admissions" class="block py-2">Admissions</a></li>
+    <li><a href="#why" class="block py-2">Why Us</a></li>
+    <li><a href="#team" class="block py-2">Faculty</a></li>
+    <li><a href="#contact" class="block py-2">Contact</a></li>
+    <li><a href="#contact" class="block py-2 bg-brightgold text-maroon font-bold px-3 py-2 rounded text-center">Apply Now</a></li>
+  </ul>
+</header>
+<section class="relative bg-maroon text-white overflow-hidden">
+  <svg class="absolute inset-0 opacity-10 pointer-events-none" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+    <use href="#star8" x="-20" y="-20" width="140" height="140"/>
+    <use href="#star8" x="260" y="240" width="160" height="160"/>
+    <use href="#star8" x="150" y="-60" width="100" height="100"/>
+  </svg>
+  
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-7 pt-8 sm:pt-16 md:pt-22 pb-12 sm:pb-24 grid md:grid-cols-2 gap-6 sm:gap-14 items-center">
+    <div>
+      <div class="eyebrow flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-brightgold mb-3 sm:mb-4">Nursery — Primary — Beyond</div>
+      <h1 class="font-serif font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-5 leading-tight">Where <span class="text-brightgold">faith</span> and learning<br>grow hand in hand</h1>
+      <p class="text-white/80 text-xs sm:text-sm lg:text-base max-w-md mb-4 sm:mb-8">A nurturing primary school in Mirza, Attock — building strong academic foundations alongside Qur'anic and Islamic values.</p>
+      
+      <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 flex-wrap mb-4 sm:mb-8">
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brightgold text-maroon font-semibold text-xs sm:text-sm px-4 sm:px-6 py-2.5 sm:py-3.5 rounded hover:bg-gold hover:-translate-y-0.5 transition">Book a Visit</a>
+        <a href="#programs" class="inline-flex items-center justify-center gap-2 border border-white/50 text-white font-semibold text-xs sm:text-sm px-4 sm:px-6 py-2.5 sm:py-3.5 rounded hover:bg-white/10 transition">View Classes</a>
+      </div>
+      
+      <div class="flex gap-2 items-start text-xs sm:text-sm text-white/65 max-w-sm">
+        <span>📍</span><span>Jassian Road, Mirza, Attock</span>
+      </div>
+    </div><div class="relative h-80 sm:h-[28rem] md:h-[32rem] max-w-md mx-auto md:max-w-none">
+
+  <!-- Main Teacher Circle -->
+  <div class="absolute top-1 sm:top-2 left-0 sm:left-2
+              w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80
+              rounded-full overflow-hidden border-2 sm:border-4
+              border-white/15 shadow-xl">
+    <img src="/images/heroImage3.png"
+         class="w-full h-full object-cover"
+         alt="Teacher">
+  </div>
+
+  <!-- Students Circle -->
+  <div class="absolute bottom-8 sm:bottom-10 left-0
+              w-44 h-44 sm:w-52 sm:h-52
+              rounded-full overflow-hidden border-2 sm:border-4
+              border-maroon shadow-lg">
+    <img src="/images/heroImage2.png"
+         class="w-full h-full object-cover"
+         alt="Students">
+  </div>
+
+  <!-- Playgroup Circle -->
+  <div class="absolute top-4 sm:top-6 right-0
+              w-40 h-40 sm:w-48 sm:h-48
+              rounded-full overflow-hidden border-2 sm:border-4
+              border-maroon shadow-lg">
+    <img src="/images/playgroup.png"
+         class="w-full h-full object-cover"
+         alt="Reading">
+  </div>
+
+  <!-- Quran Box -->
+  <div class="absolute bottom-0 right-0 sm:right-2
+              w-44 h-44 sm:w-56 sm:h-56
+              rounded-2xl overflow-hidden border-2 sm:border-4
+              border-maroon shadow-lg">
+    <img src="/images/heroImage1.png"
+         class="w-full h-full object-cover"
+         alt="Qur'an">
+  </div>
+
+</div>
+  </div>
+</section>
+<!-- STATS - Responsive -->
+<section class="bg-white border-b border-maroon/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7 py-8 sm:py-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
+    <div>
+      <div class="stat-number font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-maroon" data-target="450" data-suffix="+">0</div>
+      <div class="text-[10px] sm:text-xs md:text-sm text-inksoft mt-1">Happy Students</div>
+    </div>
+    <div>
+      <div class="stat-number font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-maroon" data-target="18" data-suffix="">0</div>
+      <div class="text-[10px] sm:text-xs md:text-sm text-inksoft mt-1">Teachers</div>
+    </div>
+    <div>
+      <div class="stat-number font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-maroon" data-target="12" data-suffix="">0</div>
+      <div class="text-[10px] sm:text-xs md:text-sm text-inksoft mt-1">Years</div>
+    </div>
+    <div>
+      <div class="stat-number font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-maroon" data-target="100" data-suffix="%">0</div>
+      <div class="text-[10px] sm:text-xs md:text-sm text-inksoft mt-1">Qur'an</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT - Responsive -->
+<section id="about" class="py-12 sm:py-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7 grid md:grid-cols-[0.85fr_1.15fr] gap-8 sm:gap-16 items-center">
+    <div class="arch aspect-[0.85/1] border border-maroon/10 overflow-hidden bg-yellow-50">
+      <img src="/images/classroom.png" class="w-full h-full object-cover" alt="School">
+    </div>
+    
+    <div>
+      <div class="eyebrow flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-3 sm:mb-4">Welcome</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon mb-4 sm:mb-5">A school built on Deen, discipline and discovery</h2>
+      <p class="text-inksoft mb-4 sm:mb-7 text-xs sm:text-sm max-w-lg">We believe a child's earliest years shape everything. Our classrooms pair modern curriculum with daily Qur'an and Islamiyat instruction.</p>
+      
+      <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
+        <div class="flex gap-3">
+          <div class="w-9 sm:w-11 h-9 sm:h-11 shrink-0 rounded-full bg-yellow-100 flex items-center justify-center"><svg class="w-4 sm:w-5 h-4 sm:h-5 text-maroon" viewBox="0 0 100 100"><use href="#star8"/></svg></div>
+          <div><h4 class="font-bold text-xs sm:text-sm mb-1">Qur'an & Islamiyat</h4><p class="text-[10px] sm:text-xs text-inksoft">Daily recitation and Islamic studies.</p></div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-9 sm:w-11 h-9 sm:h-11 shrink-0 rounded-full bg-yellow-100 flex items-center justify-center"><svg class="w-4 sm:w-5 h-4 sm:h-5 text-maroon" viewBox="0 0 100 100"><use href="#star8"/></svg></div>
+          <div><h4 class="font-bold text-xs sm:text-sm mb-1">Qualified Teachers</h4><p class="text-[10px] sm:text-xs text-inksoft">Trained and caring staff.</p></div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-9 sm:w-11 h-9 sm:h-11 shrink-0 rounded-full bg-yellow-100 flex items-center justify-center"><svg class="w-4 sm:w-5 h-4 sm:h-5 text-maroon" viewBox="0 0 100 100"><use href="#star8"/></svg></div>
+          <div><h4 class="font-bold text-xs sm:text-sm mb-1">English Medium</h4><p class="text-[10px] sm:text-xs text-inksoft">Modern curriculum.</p></div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-9 sm:w-11 h-9 sm:h-11 shrink-0 rounded-full bg-yellow-100 flex items-center justify-center"><svg class="w-4 sm:w-5 h-4 sm:h-5 text-maroon" viewBox="0 0 100 100"><use href="#star8"/></svg></div>
+          <div><h4 class="font-bold text-xs sm:text-sm mb-1">Safe Campus</h4><p class="text-[10px] sm:text-xs text-inksoft">Secure environment.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY - Responsive -->
+<section class="bg-white py-12 sm:py-24" id="gallery">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-14">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">Campus Life</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon mb-2 sm:mb-3">A glimpse inside our school</h2>
+      <p class="text-inksoft text-[10px] sm:text-sm">Everyday moments from classrooms and playground.</p>
+    </div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[80px] sm:auto-rows-[120px] md:auto-rows-[140px] gap-2 sm:gap-3.5">
+      <div class="relative rounded-md overflow-hidden col-span-2 row-span-2">
+        <img src="/images/asembly.png" class="w-full h-full object-cover" alt="Assembly">
+        <div class="absolute bottom-0 left-0 right-0 p-2 sm:p-3.5 bg-gradient-to-t from-maroon/85 to-transparent text-white text-[8px] sm:text-xs font-semibold">Assembly</div>
+      </div>
+      <div class="relative rounded-md overflow-hidden">
+        <img src="/images/classroom.png" class="w-full h-full object-cover" alt="Classroom">
+        <div class="absolute bottom-0 left-0 right-0 p-2 sm:p-3.5 bg-gradient-to-t from-maroon/85 to-transparent text-white text-[8px] sm:text-xs font-semibold">Classroom</div>
+      </div>
+      <div class="relative rounded-md overflow-hidden">
+        <img src="/images/hero3.avif" class="w-full h-full object-cover" alt="Qur'an">
+        <div class="absolute bottom-0 left-0 right-0 p-2 sm:p-3.5 bg-gradient-to-t from-maroon/85 to-transparent text-white text-[8px] sm:text-xs font-semibold">Qur'an</div>
+      </div>
+      <div class="relative rounded-md overflow-hidden">
+        <img src="/images/ground.png" class="w-full h-full object-cover" alt="Play">
+        <div class="absolute bottom-0 left-0 right-0 p-2 sm:p-3.5 bg-gradient-to-t from-maroon/85 to-transparent text-white text-[8px] sm:text-xs font-semibold">Playground</div>
+      </div>
+      <div class="relative rounded-md overflow-hidden">
+        <img src="/images/play.avif" class="w-full h-full object-cover" alt="Sports">
+        <div class="absolute bottom-0 left-0 right-0 p-2 sm:p-3.5 bg-gradient-to-t from-maroon/85 to-transparent text-white text-[8px] sm:text-xs font-semibold">Sports</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-maroon py-12 sm:py-24" id="programs">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-14">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">
+        Our Classes
+      </div>
+      <!-- Changed text color to white for better contrast on bg-maroon -->
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-2 sm:mb-3">
+        Programs for every step
+      </h2>
+      <p class="text-cream/80 text-[10px] sm:text-sm">
+        A class built for each stage of growth.
+      </p>
+    </div>
+    
+    <!-- Program Cards Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+      
+      <!-- Card 01 -->
+      <div class="bg-cream border-2 border-lightgold rounded-xl overflow-hidden hover:-translate-y-1.5 transition duration-300 shadow-xl">
+        <div class="h-28 sm:h-36 p-2">
+          <img src="/images/playgroup.png" class="w-full h-full object-cover rounded-lg" alt="Nursery">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="font-serif text-sm sm:text-base font-bold text-lightgold tracking-wide">01</div>
+          <h3 class="text-ink text-sm sm:text-lg font-serif font-semibold my-1.5">Playgroup & Nursery</h3>
+          <p class="text-[10px] sm:text-xs text-inksoft mb-4 leading-relaxed">Introduction through play.</p>
+          <span class="block text-[10px] sm:text-xs font-semibold text-lightgold border-t border-medbrown/20 pt-2.5">Ages 3 – 4</span>
+        </div>
+      </div>
+      
+      <!-- Card 02 -->
+      <div class="bg-cream border-2 border-lightgold rounded-xl overflow-hidden hover:-translate-y-1.5 transition duration-300 shadow-xl">
+        <div class="h-28 sm:h-36 p-2">
+          <img src="/images/KG_Prep.png" class="w-full h-full object-cover rounded-lg" alt="Prep">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="font-serif text-sm sm:text-base font-bold text-lightgold tracking-wide">02</div>
+          <h3 class="text-ink text-sm sm:text-lg font-serif font-semibold my-1.5">Prep / KG</h3>
+          <p class="text-[10px] sm:text-xs text-inksoft mb-4 leading-relaxed">Reading and Qur'an foundation.</p>
+          <span class="block text-[10px] sm:text-xs font-semibold text-lightgold border-t border-medbrown/20 pt-2.5">Ages 5 – 6</span>
+        </div>
+      </div>
+      
+      <!-- Card 03 -->
+      <div class="bg-cream border-2 border-lightgold rounded-xl overflow-hidden hover:-translate-y-1.5 transition duration-300 shadow-xl">
+        <div class="h-28 sm:h-36 p-2">
+          <img src="/images/one_three.png" class="w-full h-full object-cover rounded-lg" alt="Primary">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="font-serif text-sm sm:text-base font-bold text-lightgold tracking-wide">03</div>
+          <h3 class="text-ink text-sm sm:text-lg font-serif font-semibold my-1.5">Primary I – III</h3>
+          <p class="text-[10px] sm:text-xs text-inksoft mb-4 leading-relaxed">Core subjects with Islamiyat.</p>
+          <span class="block text-[8px] sm:text-xs font-semibold text-lightgold border-t border-medbrown/20 pt-2.5">Ages 6 – 9</span>
+        </div>
+      </div>
+      
+      <!-- Card 04 -->
+      <div class="bg-cream border-2 border-lightgold rounded-xl overflow-hidden hover:-translate-y-1.5 transition duration-300 shadow-xl">
+        <div class="h-28 sm:h-36 p-2">
+          <img src="/images/four_five.png" class="w-full h-full object-cover rounded-lg" alt="Primary IV">
+        </div>
+        <div class="p-4 sm:p-5">
+          <div class="font-serif text-sm sm:text-base font-bold text-lightgold tracking-wide">04</div>
+          <h3 class="text-ink text-sm sm:text-lg font-serif font-semibold my-1.5">Primary IV – V</h3>
+          <p class="text-[10px] sm:text-xs text-inksoft mb-4 leading-relaxed">Exam preparation.</p>
+          <span class="block text-[10px] sm:text-xs font-semibold text-lightgold border-t border-medbrown/20 pt-2.5">Ages 9 – 11</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- CURRICULUM - Responsive -->
+<section class="py-12 sm:py-24 bg-yellow-50" id="curriculum">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-16">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">Academic Excellence</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon mb-2 sm:mb-3">Our Comprehensive Curriculum</h2>
+      <p class="text-inksoft text-[10px] sm:text-sm">Modern education with Islamic values.</p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6 sm:gap-12 items-center mb-8 sm:mb-16">
+      <div>
+        <div class="space-y-4 sm:space-y-6">
+          <div class="flex gap-3">
+            <div class="w-10 sm:w-14 h-10 sm:h-14 shrink-0 rounded-full bg-maroon flex items-center justify-center text-white text-base sm:text-lg">📚</div>
+            <div>
+              <h4 class="text-sm sm:text-lg font-bold text-maroon mb-1">English & Literature</h4>
+              <p class="text-[9px] sm:text-sm text-inksoft">Reading, writing and grammar skills.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-3">
+            <div class="w-10 sm:w-14 h-10 sm:h-14 shrink-0 rounded-full bg-maroon flex items-center justify-center text-white text-base sm:text-lg">🔢</div>
+            <div>
+              <h4 class="text-sm sm:text-lg font-bold text-maroon mb-1">Mathematics</h4>
+              <p class="text-[9px] sm:text-sm text-inksoft">Problem-solving and numeracy.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-3">
+            <div class="w-10 sm:w-14 h-10 sm:h-14 shrink-0 rounded-full bg-maroon flex items-center justify-center text-white text-base sm:text-lg">🔬</div>
+            <div>
+              <h4 class="text-sm sm:text-lg font-bold text-maroon mb-1">Science & Discovery</h4>
+              <p class="text-[9px] sm:text-sm text-inksoft">Hands-on experiments.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-3">
+            <div class="w-10 sm:w-14 h-10 sm:h-14 shrink-0 rounded-full bg-maroon flex items-center justify-center text-white text-base sm:text-lg">🕌</div>
+            <div>
+              <h4 class="text-sm sm:text-lg font-bold text-maroon mb-1">Islamic Studies</h4>
+              <p class="text-[9px] sm:text-sm text-inksoft">Qur'an and Islamic values.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative hidden sm:block">
+        <div class="arch aspect-[0.9/1] border-4 border-brightgold overflow-hidden bg-white shadow-2xl">
+          <img src="/images/Curriculum.png" class="w-full h-full object-cover" alt="Curriculum">
+        </div>
+        <div class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-20 sm:w-32 h-20 sm:h-32 bg-brightgold rounded-full flex items-center justify-center text-white">
+          <div class="text-center">
+            <div class="font-serif text-xl sm:text-3xl font-bold">100%</div>
+            <div class="text-[8px] sm:text-xs">Islamic</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div class="bg-white rounded-lg p-4 sm:p-6 border-l-4 border-brightgold shadow-md">
+        <div class="text-xl sm:text-2xl mb-2">🎯</div>
+        <h5 class="font-bold text-maroon text-sm sm:text-base mb-1 sm:mb-2">Activity-Based</h5>
+        <p class="text-[9px] sm:text-xs text-inksoft">Hands-on learning.</p>
+      </div>
+      
+      <div class="bg-white rounded-lg p-4 sm:p-6 border-l-4 border-gold shadow-md">
+        <div class="text-xl sm:text-2xl mb-2">👥</div>
+        <h5 class="font-bold text-maroon text-sm sm:text-base mb-1 sm:mb-2">Individualized</h5>
+        <p class="text-[9px] sm:text-xs text-inksoft">Each child's pace.</p>
+      </div>
+      
+      <div class="bg-white rounded-lg p-4 sm:p-6 border-l-4 border-lightgold shadow-md">
+        <div class="text-xl sm:text-2xl mb-2">📈</div>
+        <h5 class="font-bold text-maroon text-sm sm:text-base mb-1 sm:mb-2">Structured</h5>
+        <p class="text-[9px] sm:text-xs text-inksoft">Clear progression.</p>
+      </div>
+      
+      <div class="bg-white rounded-lg p-4 sm:p-6 border-l-4 border-brightgold shadow-md">
+        <div class="text-xl sm:text-2xl mb-2">🌟</div>
+        <h5 class="font-bold text-maroon text-sm sm:text-base mb-1 sm:mb-2">Holistic</h5>
+        <p class="text-[9px] sm:text-xs text-inksoft">All development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES - Responsive -->
+<section class="py-12 sm:py-24" id="facilities">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-16">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">School Infrastructure</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon mb-2 sm:mb-3">World-Class Facilities</h2>
+      <p class="text-inksoft text-[10px] sm:text-sm">Safe, clean and modern campus.</p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6 sm:gap-12 mb-8 sm:mb-16 items-center">
+      <div class="order-2 md:order-1">
+        <div class="grid grid-cols-2 gap-2 sm:gap-4">
+          <div class="arch aspect-square overflow-hidden rounded-lg border-2 sm:border-4 border-brightgold shadow-lg">
+            <img src="/images/four_five.png" class="w-full h-full object-cover" alt="Classroom">
+          </div>
+          <div class="arch aspect-square overflow-hidden rounded-lg border-2 sm:border-4 border-gold shadow-lg">
+            <img src="/images/library.png" class="w-full h-full object-cover" alt="Library">
+          </div>
+          <div class="arch aspect-square overflow-hidden rounded-lg border-2 sm:border-4 border-gold shadow-lg">
+            <img src="/images/play.jpg" class="w-full h-full object-cover" alt="Play">
+          </div>
+          <div class="arch aspect-square overflow-hidden rounded-lg border-2 sm:border-4 border-brightgold shadow-lg">
+            <img src="/images/player.png" class="w-full h-full object-cover" alt="Prayer">
+          </div>
+        </div>
+      </div>
+      
+      <div class="order-1 md:order-2 space-y-3 sm:space-y-5">
+        <div class="flex gap-3">
+          <div class="w-10 sm:w-12 h-10 sm:h-12 shrink-0 rounded-full bg-brightgold flex items-center justify-center text-maroon font-bold text-base">🏫</div>
+          <div>
+            <h4 class="font-bold text-maroon text-sm sm:text-base mb-0.5">Spacious Classrooms</h4>
+            <p class="text-[9px] sm:text-sm text-inksoft">Max 25 students per class.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-3">
+          <div class="w-10 sm:w-12 h-10 sm:h-12 shrink-0 rounded-full bg-gold flex items-center justify-center text-maroon font-bold text-base">📚</div>
+          <div>
+            <h4 class="font-bold text-maroon text-sm sm:text-base mb-0.5">Library</h4>
+            <p class="text-[9px] sm:text-sm text-inksoft">Books in Urdu and English.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-3">
+          <div class="w-10 sm:w-12 h-10 sm:h-12 shrink-0 rounded-full bg-lightgold flex items-center justify-center text-maroon font-bold text-base">🕌</div>
+          <div>
+            <h4 class="font-bold text-maroon text-sm sm:text-base mb-0.5">Prayer Hall</h4>
+            <p class="text-[9px] sm:text-sm text-inksoft">Separate facilities provided.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-3">
+          <div class="w-10 sm:w-12 h-10 sm:h-12 shrink-0 rounded-full bg-brightgold flex items-center justify-center text-maroon font-bold text-base">🎮</div>
+          <div>
+            <h4 class="font-bold text-maroon text-sm sm:text-base mb-0.5">Playground</h4>
+            <p class="text-[9px] sm:text-sm text-inksoft">Modern equipment supervised.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-3">
+          <div class="w-10 sm:w-12 h-10 sm:h-12 shrink-0 rounded-full bg-gold flex items-center justify-center text-maroon font-bold text-base">🍎</div>
+          <div>
+            <h4 class="font-bold text-maroon text-sm sm:text-base mb-0.5">Cafeteria</h4>
+            <p class="text-[9px] sm:text-sm text-inksoft">Halal certified meals.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-3">
+          <div class="w-10 sm:w-12 h-10 sm:h-12 shrink-0 rounded-full bg-lightgold flex items-center justify-center text-maroon font-bold text-base">📹</div>
+          <div>
+            <h4 class="font-bold text-maroon text-sm sm:text-base mb-0.5">Security</h4>
+            <p class="text-[9px] sm:text-sm text-inksoft">CCTV and trained staff.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-gradient-to-r from-maroon to-maroondeep text-white rounded-lg sm:rounded-2xl p-6 sm:p-12 text-center">
+      <h3 class="font-serif text-lg sm:text-2xl md:text-3xl mb-2 sm:mb-4">Every Child Deserves the Best</h3>
+      <p class="max-w-2xl mx-auto text-white/90 mb-4 sm:mb-6 text-xs sm:text-base">Our facilities create a safe, welcoming second home for learning and spiritual growth.</p>
+      <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brightgold text-maroon font-semibold text-xs sm:text-base px-4 sm:px-8 py-2 sm:py-4 rounded-lg hover:bg-gold hover:-translate-y-1 transition">Schedule a Tour</a>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS - Responsive -->
+<section id="admissions" class="py-12 sm:py-24 bg-yellow-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-14">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">Admissions</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon mb-2 sm:mb-3">Four simple steps</h2>
+      <p class="text-inksoft text-[10px] sm:text-sm">Easy enrollment process.</p>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="bg-white rounded-md p-4 sm:p-7">
+        <div class="font-serif text-xl sm:text-2xl text-lightgold mb-2 sm:mb-4">01</div>
+        <h4 class="text-sm sm:text-base font-bold text-maroon mb-1 sm:mb-2">Book a Visit</h4>
+        <p class="text-[9px] sm:text-sm text-inksoft">Tour campus and meet teachers.</p>
+      </div>
+      <div class="bg-white rounded-md p-4 sm:p-7">
+        <div class="font-serif text-xl sm:text-2xl text-lightgold mb-2 sm:mb-4">02</div>
+        <h4 class="text-sm sm:text-base font-bold text-maroon mb-1 sm:mb-2">Submit Inquiry</h4>
+        <p class="text-[9px] sm:text-sm text-inksoft">Fill out the form.</p>
+      </div>
+      <div class="bg-white rounded-md p-4 sm:p-7">
+        <div class="font-serif text-xl sm:text-2xl text-lightgold mb-2 sm:mb-4">03</div>
+        <h4 class="text-sm sm:text-base font-bold text-maroon mb-1 sm:mb-2">Meet the Team</h4>
+        <p class="text-[9px] sm:text-sm text-inksoft">Friendly discussion.</p>
+      </div>
+      <div class="bg-white rounded-md p-4 sm:p-7">
+        <div class="font-serif text-xl sm:text-2xl text-lightgold mb-2 sm:mb-4">04</div>
+        <h4 class="text-sm sm:text-base font-bold text-maroon mb-1 sm:mb-2">Confirm Enrollment</h4>
+        <p class="text-[9px] sm:text-sm text-inksoft">Complete registration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US - Responsive -->
+<section id="why" class="py-12 sm:py-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-14">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">Why Choose Us</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon">Everything your child needs</h2>
+    </div>
+  </div>
+  
+  <div class="grid md:grid-cols-3 gap-px bg-maroon/10 border border-maroon/10 max-w-6xl mx-auto">
+    <div class="bg-cream p-6 sm:p-9">
+      <svg class="w-8 sm:w-11 h-8 sm:h-11 text-lightgold mb-3 sm:mb-5" viewBox="0 0 100 100"><use href="#star8"/></svg>
+      <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2.5">Qur'an Memorization</h3>
+      <p class="text-[9px] sm:text-sm text-inksoft">Structured Hifz classes.</p>
+    </div>
+    <div class="bg-cream p-6 sm:p-9">
+      <svg class="w-8 sm:w-11 h-8 sm:h-11 text-lightgold mb-3 sm:mb-5" viewBox="0 0 100 100"><use href="#star8"/></svg>
+      <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2.5">Small Classes</h3>
+      <p class="text-[9px] sm:text-sm text-inksoft">Personal attention.</p>
+    </div>
+    <div class="bg-cream p-6 sm:p-9">
+      <svg class="w-8 sm:w-11 h-8 sm:h-11 text-lightgold mb-3 sm:mb-5" viewBox="0 0 100 100"><use href="#star8"/></svg>
+      <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2.5">Safe Campus</h3>
+      <p class="text-[9px] sm:text-sm text-inksoft">Child-safe environment.</p>
+    </div>
+    <div class="bg-cream p-6 sm:p-9">
+      <svg class="w-8 sm:w-11 h-8 sm:h-11 text-lightgold mb-3 sm:mb-5" viewBox="0 0 100 100"><use href="#star8"/></svg>
+      <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2.5">Parent Communication</h3>
+      <p class="text-[9px] sm:text-sm text-inksoft">Regular updates.</p>
+    </div>
+    <div class="bg-cream p-6 sm:p-9">
+      <svg class="w-8 sm:w-11 h-8 sm:h-11 text-lightgold mb-3 sm:mb-5" viewBox="0 0 100 100"><use href="#star8"/></svg>
+      <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2.5">Co-Curricular</h3>
+      <p class="text-[9px] sm:text-sm text-inksoft">Sports and activities.</p>
+    </div>
+    <div class="bg-cream p-6 sm:p-9">
+      <svg class="w-8 sm:w-11 h-8 sm:h-11 text-lightgold mb-3 sm:mb-5" viewBox="0 0 100 100"><use href="#star8"/></svg>
+      <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2.5">Affordable Fees</h3>
+      <p class="text-[9px] sm:text-sm text-inksoft">Quality education.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM - Responsive -->
+<section class="bg-white py-12 sm:py-24" id="team">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-14">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">Our Faculty</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon">Teachers who care</h2>
+    </div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+      <div class="text-center">
+        <div class="arch aspect-square bg-yellow-50 overflow-hidden mb-3 sm:mb-4"><img src="/images/nursary_teacher.png" class="w-full h-full object-cover" alt="Teacher"></div>
+        <h4 class="text-xs sm:text-sm font-bold">Nursery Teacher</h4>
+        <div class="text-[8px] sm:text-xs text-lightgold font-semibold">Early Years</div>
+      </div>
+      <div class="text-center">
+        <div class="arch aspect-square bg-yellow-50 overflow-hidden mb-3 sm:mb-4"><img src="/images/quran_teacher.png" class="w-full h-full object-cover" alt="Teacher"></div>
+        <h4 class="text-xs sm:text-sm font-bold">Qari Teacher</h4>
+        <div class="text-[8px] sm:text-xs text-lightgold font-semibold">Qur'an</div>
+      </div>
+      <div class="text-center">
+        <div class="arch aspect-square bg-yellow-50 overflow-hidden mb-3 sm:mb-4"><img src="/images/english.png" class="w-full h-full object-cover" alt="Teacher"></div>
+        <h4 class="text-xs sm:text-sm font-bold">English Teacher</h4>
+        <div class="text-[8px] sm:text-xs text-lightgold font-semibold">Primary</div>
+      </div>
+      <div class="text-center">
+        <div class="arch aspect-square bg-yellow-50 overflow-hidden mb-3 sm:mb-4"><img src="/images/math_teacher.png" class="w-full h-full object-cover" alt="Teacher"></div>
+        <h4 class="text-xs sm:text-sm font-bold">Maths Teacher</h4>
+        <div class="text-[8px] sm:text-xs text-lightgold font-semibold">Primary</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS - Responsive -->
+<section class="py-12 sm:py-24" id="testimonials">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-14">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">Parent Voices</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon">What families say</h2>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-4 sm:gap-6">
+      <div class="bg-white border border-maroon/10 rounded-md p-4 sm:p-7">
+        <svg class="w-5 sm:w-7 h-5 sm:h-7 text-lightgold mb-3 sm:mb-4" viewBox="0 0 100 100"><use href="#star8"/></svg>
+        <p class="text-[9px] sm:text-sm text-inksoft mb-4 sm:mb-6">"My daughter has grown in confidence and Qur'an recitation."</p>
+        <div class="flex items-center gap-2">
+          <div class="w-8 sm:w-11 h-8 sm:h-11 rounded-full overflow-hidden shrink-0"><img src="/images/primaryII.png" class="w-full h-full object-cover" alt="Parent"></div>
+          <div><div class="text-xs sm:text-sm font-bold">Umm-e-Habiba</div><div class="text-[7px] sm:text-xs text-lightgold">Parent, Primary II</div></div>
+        </div>
+      </div>
+      
+      <div class="bg-white border border-maroon/10 rounded-md p-4 sm:p-7">
+        <svg class="w-5 sm:w-7 h-5 sm:h-7 text-lightgold mb-3 sm:mb-4" viewBox="0 0 100 100"><use href="#star8"/></svg>
+        <p class="text-[9px] sm:text-sm text-inksoft mb-4 sm:mb-6">"Rare balance of academics and Islamic upbringing."</p>
+        <div class="flex items-center gap-2">
+          <div class="w-8 sm:w-11 h-8 sm:h-11 rounded-full overflow-hidden shrink-0"><img src="/images/waqass.png" class="w-full h-full object-cover" alt="Parent"></div>
+          <div><div class="text-xs sm:text-sm font-bold">Muhammad Waqas</div><div class="text-[7px] sm:text-xs text-lightgold">Parent, Prep</div></div>
+        </div>
+      </div>
+      
+      <div class="bg-white border border-maroon/10 rounded-md p-4 sm:p-7">
+        <svg class="w-5 sm:w-7 h-5 sm:h-7 text-lightgold mb-3 sm:mb-4" viewBox="0 0 100 100"><use href="#star8"/></svg>
+        <p class="text-[9px] sm:text-sm text-inksoft mb-4 sm:mb-6">"Second home for our kids with great communication."</p>
+        <div class="flex items-center gap-2">
+          <div class="w-8 sm:w-11 h-8 sm:h-11 rounded-full overflow-hidden shrink-0"><img src="/images/prepII.png" class="w-full h-full object-cover" alt="Parent"></div>
+          <div><div class="text-xs sm:text-sm font-bold">Ayesha Farooq</div><div class="text-[7px] sm:text-xs text-lightgold">Parent, Primary IV</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS - Responsive -->
+<section class="bg-yellow-50 py-12 sm:py-24" id="events">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-14">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">News & Events</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon">What's happening</h2>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-4 sm:gap-6">
+      <div class="bg-white rounded-md overflow-hidden shadow-lg shadow-maroon/5">
+        <div class="h-32 sm:h-44"><img src="/images/hero3.avif" class="w-full h-full object-cover" alt="Event"></div>
+        <div class="p-4 sm:p-6">
+          <div class="text-[8px] sm:text-xs font-bold text-lightgold tracking-wide mb-1 sm:mb-2">15 SEP</div>
+          <h4 class="font-serif text-maroon text-sm sm:text-lg mb-1 sm:mb-2">Qirat Competition</h4>
+          <p class="text-[9px] sm:text-sm text-inksoft">Student recitation.</p>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-md overflow-hidden shadow-lg shadow-maroon/5">
+        <div class="h-32 sm:h-44"><img src="/images/ptm.png" class="w-full h-full object-cover" alt="Event"></div>
+        <div class="p-4 sm:p-6">
+          <div class="text-[8px] sm:text-xs font-bold text-lightgold tracking-wide mb-1 sm:mb-2">28 SEP</div>
+          <h4 class="font-serif text-maroon text-sm sm:text-lg mb-1 sm:mb-2">Parent Meeting</h4>
+          <p class="text-[9px] sm:text-sm text-inksoft">Progress discussion.</p>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-md overflow-hidden shadow-lg shadow-maroon/5">
+        <div class="h-32 sm:h-44"><img src="/images/player.png" class="w-full h-full object-cover" alt="Event"></div>
+        <div class="p-4 sm:p-6">
+          <div class="text-[8px] sm:text-xs font-bold text-lightgold tracking-wide mb-1 sm:mb-2">10 OCT</div>
+          <h4 class="font-serif text-maroon text-sm sm:text-lg mb-1 sm:mb-2">Sports Day</h4>
+          <p class="text-[9px] sm:text-sm text-inksoft">Races and games.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER - Responsive -->
+<section class="bg-gradient-to-r from-brightgold to-gold">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7 py-8 sm:py-12 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-8">
+    <div>
+      <h2 class="font-serif text-lg sm:text-2xl md:text-3xl text-maroon max-w-md">Stay updated</h2>
+      <p class="text-maroon/75 text-[10px] sm:text-sm mt-1 sm:mt-2">Join our mailing list.</p>
+    </div>
+    
+    <form class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto" onsubmit="event.preventDefault(); alert('Thank you!');">
+      <input type="text" placeholder="Name" required class="px-3 sm:px-4 py-2 sm:py-3 rounded text-[10px] sm:text-sm border-0 flex-1 sm:flex-none">
+      <input type="email" placeholder="Email" required class="px-3 sm:px-4 py-2 sm:py-3 rounded text-[10px] sm:text-sm border-0 flex-1 sm:flex-none">
+      <button type="submit" class="bg-maroon text-white font-semibold px-3 sm:px-6 py-2 sm:py-3 rounded text-[10px] sm:text-sm hover:bg-maroondeep transition">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT - Responsive -->
+<section id="contact" class="py-12 bg-white sm:py-24">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-14">
+      <div class="eyebrow inline-flex items-center gap-2.5 text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-2 sm:mb-4">Apply Now</div>
+      <h2 class="font-serif font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-maroon mb-2 sm:mb-3">Start your child's admission</h2>
+      <p class="text-inksoft text-[10px] sm:text-sm">Fill in the details below and our admissions team will contact you within 1–2 working days.</p>
+    </div>
+
+    <div class="bg-cream border border-maroon/10 rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-10">
+
+      <!-- Success message (hidden until the form is submitted) -->
+      <div id="applySuccess" class="hidden text-center py-8 sm:py-14">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-4 rounded-full bg-brightgold/20 flex items-center justify-center text-2xl sm:text-3xl">✓</div>
+        <h3 class="font-serif text-lg sm:text-2xl text-maroon mb-2">Application received</h3>
+        <p class="text-inksoft text-xs sm:text-sm max-w-md mx-auto">Jazak Allah Khair for applying to Islamic Horizon. A member of our admissions team will call you shortly to confirm the next steps.</p>
+        <button type="button" id="applyAnother" class="mt-6 inline-flex items-center justify-center gap-2 border border-maroon/20 text-maroon font-semibold text-xs sm:text-sm px-5 py-2.5 rounded hover:bg-maroon/5 transition">Submit another application</button>
+      </div>
+
+<form id="applyForm" class="flex flex-col gap-6 sm:gap-8" novalidate>
+        <!-- Student details -->
+        <fieldset>
+          <legend class="text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-3 sm:mb-4">Student Details</legend>
+          <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
+            <div class="flex flex-col gap-1">
+              <label for="studentName" class="text-[10px] sm:text-xs font-semibold text-inksoft">Student's Full Name *</label>
+              <input id="studentName" name="studentName" type="text" required class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brightgold">
+              <span class="field-error hidden text-[9px] sm:text-[11px] text-red-600">Please enter the student's name.</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="dob" class="text-[10px] sm:text-xs font-semibold text-inksoft">Date of Birth *</label>
+              <input id="dob" name="dob" type="date" required class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brightgold">
+              <span class="field-error hidden text-[9px] sm:text-[11px] text-red-600">Please select a date of birth.</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="gender" class="text-[10px] sm:text-xs font-semibold text-inksoft">Gender *</label>
+              <select id="gender" name="gender" required class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brightgold">
+                <option value="" disabled selected>Select gender</option>
+                <option>Boy</option>
+                <option>Girl</option>
+              </select>
+              <span class="field-error hidden text-[9px] sm:text-[11px] text-red-600">Please select a gender.</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="classFor" class="text-[10px] sm:text-xs font-semibold text-inksoft">Class Applying For *</label>
+              <select id="classFor" name="classFor" required class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brightgold">
+                <option value="" disabled selected>Select a class</option>
+                <option>Playgroup & Nursery</option>
+                <option>Prep / KG</option>
+                <option>Primary I – III</option>
+                <option>Primary IV – V</option>
+              </select>
+              <span class="field-error hidden text-[9px] sm:text-[11px] text-red-600">Please select a class.</span>
+            </div>
+            <div class="flex flex-col gap-1 sm:col-span-2">
+              <label for="prevSchool" class="text-[10px] sm:text-xs font-semibold text-inksoft">Previous School <span class="text-inksoft/50 font-normal">(if any)</span></label>
+              <input id="prevSchool" name="prevSchool" type="text" class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brightgold">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Parent / Guardian details -->
+        <fieldset>
+          <legend class="text-[10px] sm:text-xs tracking-widest uppercase font-bold text-lightgold mb-3 sm:mb-4">Parent / Guardian Details</legend>
+          <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
+            <div class="flex flex-col gap-1">
+              <label for="guardianName" class="text-[10px] sm:text-xs font-semibold text-inksoft">Full Name *</label>
+              <input id="guardianName" name="guardianName" type="text" required class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brightgold">
+              <span class="field-error hidden text-[9px] sm:text-[11px] text-red-600">Please enter your name.</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="guardianPhone" class="text-[10px] sm:text-xs font-semibold text-inksoft">Phone Number *</label>
+              <input id="guardianPhone" name="guardianPhone" type="tel" required pattern="[0-9+\-\s]{7,15}" placeholder="03XX XXXXXXX" class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brightgold">
+              <span class="field-error hidden text-[9px] sm:text-[11px] text-red-600">Please enter a valid phone number.</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="guardianEmail" class="text-[10px] sm:text-xs font-semibold text-inksoft">Email <span class="text-inksoft/50 font-normal">(optional)</span></label>
+              <input id="guardianEmail" name="guardianEmail" type="email" class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brightgold">
+              <span class="field-error hidden text-[9px] sm:text-[11px] text-red-600">Please enter a valid email.</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="address" class="text-[10px] sm:text-xs font-semibold text-inksoft">Home Address *</label>
+              <input id="address" name="address" type="text" required class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brightgold">
+              <span class="field-error hidden text-[9px] sm:text-[11px] text-red-600">Please enter your address.</span>
+            </div>
+            <div class="flex flex-col gap-1 sm:col-span-2">
+              <label for="notes" class="text-[10px] sm:text-xs font-semibold text-inksoft">Additional Notes <span class="text-inksoft/50 font-normal">(optional)</span></label>
+              <textarea id="notes" name="notes" class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-maroon/15 rounded text-[11px] sm:text-sm bg-white min-h-[80px] focus:outline-none focus:ring-2 focus:ring-brightgold"></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+          <button type="submit" class="inline-flex items-center justify-center gap-2 bg-brightgold text-maroon font-semibold text-xs sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded hover:bg-gold hover:-translate-y-0.5 transition">Submit Application</button>
+          <p id="applyMessage" class="hidden text-sm font-semibold"></p>
+          <span class="text-[9px] sm:text-xs text-inksoft/70">Fields marked * are required. We'll never share your details.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER - Responsive -->
+<footer class="bg-maroon text-white/70 p-6 sm:p-10 pt-12 sm:pt-18 pb-7">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 mb-8 sm:mb-12">
+      <div>
+        <div class="flex gap-2 sm:gap-3 items-center mb-3 sm:mb-4">
+  <!-- Logo Image -->
+  <img src="islamic_horizon_logo.png" alt="Islamic Horizon Logo" class="w-8 h-8 sm:w-9 sm:h-9 object-contain" />
+
+  <div>
+    <div class="text-white font-serif font-bold text-xs sm:text-base">Islamic Horizon</div>
+    <div class="text-brightgold text-[8px] sm:text-[10px] tracking-widest uppercase">School System</div>
+  </div>
+</div>
+        <p class="text-[9px] sm:text-sm leading-6 sm:leading-7">A nurturing primary school in Mirza, Attock.</p>
+      </div>
+      
+      <div>
+        <h5 class="text-white text-[9px] sm:text-xs tracking-wide uppercase font-bold mb-3 sm:mb-4">Quick Links</h5>
+        <ul class="space-y-1.5 sm:space-y-2.5 text-[9px] sm:text-sm">
+          <li><a href="#about" class="hover:text-brightgold transition">About Us</a></li>
+          <li><a href="#gallery" class="hover:text-brightgold transition">Gallery</a></li>
+          <li><a href="#programs" class="hover:text-brightgold transition">Classes</a></li>
+          <li><a href="#team" class="hover:text-brightgold transition">Faculty</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h5 class="text-white text-[9px] sm:text-xs tracking-wide uppercase font-bold mb-3 sm:mb-4">Programs</h5>
+        <ul class="space-y-1.5 sm:space-y-2.5 text-[9px] sm:text-sm">
+          <li><a href="#programs" class="hover:text-brightgold transition">Nursery</a></li>
+          <li><a href="#programs" class="hover:text-brightgold transition">Prep / KG</a></li>
+          <li><a href="#programs" class="hover:text-brightgold transition">Primary I – III</a></li>
+          <li><a href="#programs" class="hover:text-brightgold transition">Primary IV – V</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h5 class="text-white text-[9px] sm:text-xs tracking-wide uppercase font-bold mb-3 sm:mb-4">Contact</h5>
+        <ul class="space-y-1.5 sm:space-y-2.5 text-[9px] sm:text-sm">
+          <li>
+
+Address: Mohallah Eid Gah Jassian Road, Mirza Attock</li>
+          <li>+92 300 1234567</li>
+          <li>info@islamichorizon.edu.pk</li>
+          <li>Mon – Sat: 8:00 AM – 1:30 PM</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="border-t border-white/10 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 text-[8px] sm:text-xs">
+      <span>© 2026 Islamic Horizon. All rights reserved.</span>
+      <div class="flex gap-2 sm:gap-3">
+        <a href="#" class="w-6 sm:w-8 h-6 sm:h-8 rounded-full border border-white/25 flex items-center justify-center">f</a>
+        <a href="#" class="w-6 sm:w-8 h-6 sm:h-8 rounded-full border border-white/25 flex items-center justify-center">in</a>
+        <a href="#" class="w-6 sm:w-8 h-6 sm:h-8 rounded-full border border-white/25 flex items-center justify-center">ig</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 400; // Complete hone ka duration (jitna kam hoga utna fast hoga)
+    const animateCounters = () => {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const suffix = counter.getAttribute('data-suffix') || '';
+        let count = 0;
+
+        // Speed calculation based on target number
+        const increment = target / (speed / 10);
+        const updateCount = () => {
+          count += increment;
+          if (count < target) {
+            counter.innerText = Math.ceil(count) + suffix;
+            setTimeout(updateCount, 15);
+          } else {
+            counter.innerText = target + suffix;
+          }
+        };
+        updateCount();
+      });
+    };
+    // Intersection Observer taake animation tab start ho jab section screen par aaye
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.disconnect(); // Animation aik baar chalne ke baad stop ho jayegi
+        }
+      });
+    }, { threshold: 0.3 });
+    const statCounter = document.querySelector('.stat-number');
+    if (statCounter) {
+      const statsSection = statCounter.parentElement.parentElement;
+      if (statsSection) {
+        observer.observe(statsSection);
+      }
+    }
+
+    // menuBtn ko safely handle karein — agar element na mile to error nahi ayega
+    const menuBtn = document.getElementById('menuBtn');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        const nav = document.getElementById('mobileNav');
+        if (nav) {
+          nav.classList.toggle('hidden');
+          nav.classList.toggle('flex');
+        }
+      });
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("applyForm");
+    if (!form) return;
+
+    const successBox = document.getElementById("applySuccess");
+    const messageEl = document.getElementById("applyMessage");
+    const applyAnotherBtn = document.getElementById("applyAnother");
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      // clear old error states
+      form.querySelectorAll(".field-error").forEach(el => el.classList.add("hidden"));
+      messageEl.classList.add("hidden");
+
+      // basic required-field check (uses existing markup)
+      let hasError = false;
+      form.querySelectorAll("[required]").forEach(field => {
+        if (!field.value.trim()) {
+          hasError = true;
+          const errorSpan = field.parentElement.querySelector(".field-error");
+          if (errorSpan) errorSpan.classList.remove("hidden");
+        }
+      });
+      if (hasError) return;
+
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "Submitting...";
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch("send-mail.php", {
+          method: "POST",
+          body: formData
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          form.classList.add("hidden");
+          successBox.classList.remove("hidden");
+        } else {
+          messageEl.textContent = data.message || "Something went wrong.";
+          messageEl.classList.remove("hidden", "text-green-600");
+          messageEl.classList.add("text-red-600");
+        }
+      } catch (err) {
+        console.error(err);
+        messageEl.textContent = "Network error. Please try again.";
+        messageEl.classList.remove("hidden", "text-green-600");
+        messageEl.classList.add("text-red-600");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    });
+
+    if (applyAnotherBtn) {
+      applyAnotherBtn.addEventListener("click", function () {
+        form.reset();
+        form.classList.remove("hidden");
+        successBox.classList.add("hidden");
+      });
+    }
+  });
+</script>
+</body>
+</html>
